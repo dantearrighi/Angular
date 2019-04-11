@@ -1,6 +1,6 @@
 <div class="card-columns m-5 animated fadeIn">
     <div (click)="verArtista( item )" *ngFor="let item of items" class="col-sm card puntero">
-        <div class="card-group ">
+        <div class="card-deck ">
 
             <img [src]="item.images | noimage" class=" card-img-top " alt="... ">
             <div class="card-body ">

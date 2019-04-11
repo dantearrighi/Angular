@@ -1,9 +1,9 @@
 <app-loading *ngIf="loadingArtist"></app-loading>
 <div class="row">
 
-    <div class="col-2"></div>
-    <img [src]="artista.images | noimage" class="img - thumbnail img-circle">
-
+    <div class="col-2">
+        <img [src]="artista.images | noimage" class="img - thumbnail img-circle">
+    </div>
     <div class="col">
         <h3>
             {{ artista.name }}
@@ -14,6 +14,8 @@
         </a>
         </p>
     </div>
+
+
     <div class="col-4">
         <div class="col-text text-right">
             <button routerLink="/search" class="btn btn-outline-danger">
@@ -21,6 +23,33 @@
           </button>
         </div>
     </div>
+</div>
 
+<div class="row m-5">
+    <div class="col">
+        <table class="table" style="color:white">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Cancion</th>
+                    <th>Vista Previa</th>
+                </tr>
+            </thead>
 
+            <tbody>
+                <tr *ngFor="let track of topTracks">
+                    <td>
+                        <img [src]="track.album.images | noimage" class="img-thumb">
+                    </td>
+                    <td> {{ track.album.name }}</td>
+                    <td> {{ track.name }}</td>
+                    <td>
+
+                        <iframe [src]="track.uri | domseguro" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
