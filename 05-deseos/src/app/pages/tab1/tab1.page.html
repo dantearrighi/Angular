@@ -20,24 +20,13 @@
 
     <ion-list lines="none">
         <ion-list-header>
-            <ion-label>Seleccionar categoría</ion-label>
+            <ion-label>Seleccionar Lista</ion-label>
         </ion-list-header>
         <ion-item *ngFor="let lista of deseosService.listas" detail>
             <ion-icon slot="start" color="medium" name="book"></ion-icon>
             <ion-label>{{ lista.titulo }}</ion-label>
         </ion-item>
-        <ion-item href="https://ionicframework.com/docs/building/scaffolding">
-            <ion-icon slot="start" color="medium" name="build"></ion-icon>
-            <ion-label>lascolaridad</ion-label>
-        </ion-item>
-        <ion-item href="https://ionicframework.com/docs/layout/structure">
-            <ion-icon slot="start" color="medium" name="grid"></ion-icon>
-            <ion-label>elque enllena el dotor</ion-label>
-        </ion-item>
-        <ion-item href="https://ionicframework.com/docs/theming/basics">
-            <ion-icon slot="start" color="medium" name="color-fill"></ion-icon>
-            <ion-label>nacimiento</ion-label>
-        </ion-item>
+
     </ion-list>
 
 

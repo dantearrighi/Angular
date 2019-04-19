@@ -1,13 +1,35 @@
 <ion-header>
     <ion-toolbar>
+        <ion-buttons>
+            <ion-back-button defaultHref="/" color="primary">
+            </ion-back-button>
+        </ion-buttons>
         <ion-title>Agregar Lista</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
 
-    <h1>
-        Agregar lista
-    </h1>
+    <ion-list color="primary">
+        <ion-item color="primary">
+            <ion-label position="floating">Nuevo item</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <ion-list>
+
+        <ion-list-header>
+            <ion-label>Requisitos:</ion-label>
+        </ion-list-header>
+
+        <ion-item color="dark">
+            <ion-checkbox slot="start" color="primary"></ion-checkbox>
+            <ion-label>Recordar comer hoy</ion-label>
+        </ion-item>
+
+    </ion-list>
+
+
 
 </ion-content>
