@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class NavbarComponent implements OnInit {
-
+// TODO: Instalar bootstrap
   constructor() { }
 
   ngOnInit() {
